@@ -27,6 +27,8 @@ export default function App() {
     strokeDashoffset: "994"
   };
   const buttonsStyle = {
+    width: "300px",
+    height: "300px",
     position: "absolute",
     top: "calc(50vh - 40vw)",
     left: "10vw",
@@ -65,7 +67,7 @@ export default function App() {
     show: {
       opacity: 1,
       transition: {
-        delayChildren: 0.5,
+        delayChildren: 1,
         staggerChildren: 0.3
       }
     }
