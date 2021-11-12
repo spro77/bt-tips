@@ -16,8 +16,8 @@ export default function App() {
   const heartPathStyle = {
     position: "absolute",
     top: "calc(50vh - 140px)",
-    left: "-14px",
-    width: "100vw",
+    left: "0",
+    width: "375px",
     fill: "none",
     stroke: "red",
     strokeWidth: "12",
@@ -27,13 +27,11 @@ export default function App() {
     strokeDashoffset: "994"
   };
   const buttonsStyle = {
-    width: "300px",
-    height: "300px",
     position: "absolute",
-    top: "calc(50vh - 40vw)",
-    left: "10vw",
-    width: "80vw",
-    height: "80vw"
+    top: "calc(50% - 144px)",
+    left: "calc(50% - 150px)",
+    width: "300px",
+    height: "300px"
   };
   const buttonStyle = {
     width: "calc(50% - 8px)",
@@ -67,8 +65,8 @@ export default function App() {
     show: {
       opacity: 1,
       transition: {
-        delayChildren: 1,
-        staggerChildren: 0.3
+        delayChildren: 0.75,
+        staggerChildren: 0.25
       }
     }
   };
@@ -78,7 +76,7 @@ export default function App() {
     show: {
       opacity: 1,
       transition: {
-        duration: 1
+        duration: 1.5
       }
     }
   };
@@ -110,16 +108,16 @@ export default function App() {
       <svg
         style={heartPathStyle}
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 -4 448 168"
+        viewBox="0 -6 375 172"
       >
         <motion.path
           animate={{
-            pathLength: [0, 0.5, 1],
-            pathOffset: [0, 0.2, 1],
-            opacity: [1, 0.75, 0]
+            pathLength: [0, 1],
+            pathOffset: [0, 1],
+            opacity: [1, 0]
           }}
           transition={{ duration: 2, ease: "easeInOut" }}
-          d="M2.6 131.2c100.6-43 161.8 92 275.2-34 15.2-17 36.7-37.3 36.2-55.8C312-22 209.6.1 238.8 56.2c33.5-53-68.2-81.2-72.4-14.8-1.2 19.5 16.1 37.7 34.2 55.8 139.8 139.8 168.1-21.7 245.2 39"
+          d="M0 136.2c112.5-39 111 89.5 224-38.2 15-17 38-35.5 38-56 0-64-111.5-38.9-75 14 37-52.8-75-78.5-75-14 0 20.5 21.6 36.8 38.5 56 111.8 127.2 111.3-.7 225 38.2"
         />
       </svg>
       <Buttons />
